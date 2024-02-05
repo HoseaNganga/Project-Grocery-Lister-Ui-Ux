@@ -1,0 +1,175 @@
+/* IMPORT FONT */
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+/* UNIVERSAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL STYLES */
+.gradient-text {
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent;
+}
+
+html {
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.App {
+  -webkit-animation: blink 0.7s infinite alternate;
+  animation: blink 0.7s infinite alternate;
+  display: grid;
+  padding: 0.5rem;
+  height: auto;
+  width: 100%;
+}
+@-webkit-keyframes blink {
+  100% {
+    box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #0ba9ca,
+      0 0 10px #0ba9ca, 0 0 10px #0ba9ca;
+  }
+}
+
+@keyframes blink {
+  100% {
+    box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #0ba9ca,
+      0 0 10px #0ba9ca, 0 0 10px #0ba9ca;
+  }
+}
+
+.header {
+  background-color: #040c18;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 0.2rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.searchForm {
+  display: grid;
+  align-items: center;
+}
+
+.searchForm input,
+.inputAdd {
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.header .icon {
+  position: absolute;
+  right: 1rem;
+}
+label {
+  display: none;
+}
+
+.AddForm {
+  background-color: grey;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.inputAdd {
+  flex: 1;
+}
+
+.AddForm button {
+  padding: 0.25rem 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: green;
+  background-color: #040c18;
+  border-radius: 8px;
+  transition: color 0.3s ease, color 0.3s ease-in-out;
+}
+
+.AddForm button:hover {
+  background-color: green; /* Change background color on hover */
+  color: #040c18; /* Change text color on hover */
+}
+
+.main {
+  flex: 1;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.listContainer {
+  list-style-type: none;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.listItem:hover {
+  box-shadow: 0px 3px 3px black;
+  cursor: pointer;
+}
+
+.listItem button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  color: red;
+  background-color: #040c18;
+  transition: color 0.3s ease, color 0.3s ease-in-out;
+  cursor: pointer;
+}
+.listItem button:hover {
+  background-color: red; /* Change background color on hover */
+  color: #040c18; /* Change text color on hover */
+}
+
+.footer {
+  background-color: #040c18;
+  color: white;
+  text-align: center;
+  line-height: 2rem;
+}
+
+@media screen and (max-width: 490px) {
+  .header {
+    display: grid;
+    gap: 0.1rem;
+  }
+
+  .header input {
+    max-width: 100%;
+  }
+
+  .header h1 {
+    text-align: center;
+  }
+  .main {
+    max-height: 500px;
+  }
+}
